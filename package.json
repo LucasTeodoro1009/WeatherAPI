@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "axios": "^1.7.4",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  },
+  "name": "sprints-2-3-pb-aws-julho-a",
+  "version": "1.0.0",
+  "description": "Avaliação das segunda e terceira sprints do programa de bolsas Compass UOL para formação em machine learning para AWS.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

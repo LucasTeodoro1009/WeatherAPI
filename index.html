@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+
+    <div class="container">
+        <form action="/weather" method="POST" id="locationForm">
+            <h1>Type in a Location</h1>
+            <input name="input" type="text" placeholder="Location" required>
+            <div>
+                <button type="submit">Search</button>
+            </div>
+            <div id="errorMessage"></div>
+        </form>
+    </div>
+
+    <script>
+        // Example function to display weather data (this should be used on the server response page)
+        function displayWeather(data) {
+            const weatherDiv = document.createElement('div');
+            weatherDiv.innerHTML = `
+                <h2>Weather in ${data.city}, ${data.country}</h2>
+                <p>Temperature: ${data.temp}°C</p>
+                <p>Weather: ${data.weather} - ${data.description}</p>
+                <p>Feels Like: ${data.feel}°C</p>
+                <p>Min Temp: ${data.tempMin}°C</p>
+                <p>Max Temp: ${data.tempMax}°C</p>
+                <p>Pressure: ${data.pressure} hPa</p>
+                <p>Humidity: ${data.humidity}%</p>
+                <p>Wind Speed: ${data.wind} m/s</p>
+            `;
+            document.body.appendChild(weatherDiv);
+        }
+    </script>
+</body>
+</html>
